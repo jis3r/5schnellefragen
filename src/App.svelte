@@ -13,15 +13,13 @@
 </script>
 
 <main>
-	<Header/>
 	<div class="container">
-		<div class="row" style="margin-top: 25%">
-			{#if asking}
-				<Game on:back={toggleView}/>
-			{:else}
-				<Landing on:start={toggleView}/>
-			{/if}
-		</div>
+		<Header/>
+		{#if asking}
+			<Game on:back={toggleView}/>
+		{:else}
+			<Landing on:start={toggleView}/>
+		{/if}
 	  </div>
 </main>
 
