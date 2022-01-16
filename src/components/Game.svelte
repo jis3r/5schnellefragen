@@ -20,5 +20,4 @@
 </script>
 
 <Question details={questions[pos]}/>
-<button on:click={next}>next</button>
-
+<button class="button-primary button-low" on:click={next}>next</button>

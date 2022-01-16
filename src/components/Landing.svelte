@@ -8,15 +8,9 @@
     }
 
 </script>
-<div class="test twelve columns">
-    <button class="button-primary" on:click={start}>Gib mir 5!</button>
+<div class="row" style="margin-top: 25%">
+    <div class="test twelve columns">
+    </div>
 </div>
 
-<style>
-    button { 
-        bottom: 25%;
-    }
-    .test {
-        bottom: 0;
-    }
-</style>
+<button class="button-low button-primary" on:click={start}>Gib mir 5!</button>
