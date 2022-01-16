@@ -28,5 +28,8 @@ span {
     border-radius: 0.25rem;
     padding: 0.125rem 0.625rem;
     margin: 0 0.25rem;
+    line-height: 1;
+    font-weight: 500;
+    vertical-align: middle;
 }
 </style>
