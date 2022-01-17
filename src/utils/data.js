@@ -2,56 +2,56 @@ let data = [
     {
         id: "1",
         question: "Was war dein letzter Fehlkauf?",
-        episode: "4",
+        episode: "004",
         year: "2017",
         author: "Felix"
     },
     {
         id: "2",
         question: "Welche Frage würde dein fünfzehnjähriges Ich stellen? (titten oder geld)",
-        episode: "4",
+        episode: "004",
         year: "2017",
         author: "Felix"
     },
     {
         id: "3",
         question: "Was ist das in deinem Leben worauf du am stolzesten bist?",
-        episode: "4",
+        episode: "004",
         year: "2017",
         author: "Felix"
     },
     {
         id: "4",
         question: "Was ist das Langweiligste an dir?",
-        episode: "4",
+        episode: "004",
         year: "2017",
         author: "Felix"
     },
     {
         id: "5",
         question: "Warum sind auf öffentlichen Toiletten immer Schamhaare?",
-        episode: "4",
+        episode: "004",
         year: "2017",
         author: "Felix"
     },
     {
         id: "6",
         question: "Was sind deine Stärken?",
-        episode: "5",
+        episode: "005",
         year: "2017",
         author: "Tommi"
     },
     {
         id: "7",
         question: "Macht Geld glücklich?",
-        episode: "5",
+        episode: "005",
         year: "2017",
         author: "Tommi"
     },
     {
         id: "8",
         question: "Was ist deine Morgenroutine?",
-        episode: "5",
+        episode: "005",
         year: "2017",
         author: "Tommi"
     },
@@ -93,35 +93,35 @@ let data = [
     {
         id: "14",
         question: "Bist du mal was cooles untypisches gefahren?",
-        episode: "72",
+        episode: "072",
         year: "2019",
         author: "Felix"
     },
     {
         id: "15",
         question: "Hose oder Jogginghose?",
-        episode: "72",
+        episode: "072",
         year: "2019",
         author: "Felix"
     },
     {
         id: "16",
         question: "Wie viele aktive Hosen hast du?",
-        episode: "72",
+        episode: "072",
         year: "2019",
         author: "Felix"
     },
     {
         id: "17",
         question: "Kannst du mit Stäbchen essen?",
-        episode: "72",
+        episode: "072",
         year: "2019",
         author: "Felix"
     },
     {
         id: "18",
         question: "Wie sieht der Sommer bei dir aus?",
-        episode: "72",
+        episode: "072",
         year: "2019",
         author: "Felix"
     },
@@ -304,31 +304,36 @@ let data = [
         id: "44",
         question: "Welches Möbelstück könntest du bauen?",
         episode: "160",
-        year: "2021"
+        year: "2021",
+        author: "Felix"
     },
     {
         id: "45",
         question: "Wärmst du dich vor dem Sport auf?",
         episode: "160",
-        year: "2021"
+        year: "2021",
+        author: "Felix"
     },
     {
         id: "46",
         question: "Was ist die überraschendste Buchstabenposition im Alphabet?",
         episode: "160",
-        year: "2021"
+        year: "2021",
+        author: "Felix"
     },
     {
         id: "47",
         question: "Welches Nutzfahrzeug würdest du gerne mal bedienen?",
         episode: "160",
-        year: "2021"
+        year: "2021",
+        author: "Felix"
     },
     {
         id: "48",
         question: "Warum gibt es noch Klobrillen ohne Absenkautomatik?",
         episode: "160",
-        year: "2021"
+        year: "2021",
+        author: "Felix"
     },
     {
         id: "49",
