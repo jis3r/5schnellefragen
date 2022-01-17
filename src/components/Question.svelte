@@ -1,4 +1,6 @@
 <script>
+    import { changeBackground } from '../utils/animation';
+    import { onMount, afterUpdate } from "svelte";
     export let details = {  id: "-1", 
                             question: "Frage",
                             episode: "-1",
@@ -6,26 +8,47 @@
                             author: "dump"
 
     }
+    
+    onMount(() => {
+        changeBackground(parseInt(details.episode));
+    });
+
+    afterUpdate(() => {
+        changeBackground(parseInt(details.episode));
+    });
 </script>
 
 <div class="row" style="margin-top: 25%">
     <div class="twelve columns">
-        <h3 class="question">{details.question}</h3>
+        <div class="card">
+            <h3 class="question">{details.question}</h3>
+        </div>
+            <span class="author">von {details.author}</span>
+            <span class="year">Jahr {details.year}</span>
+            <span class="episode">Folge {details.episode}</span>
     </div>
 </div>
 <div class="row">
     <div class="twelve columns">
-        <span class="episode">Folge {details.episode}</span>
-        <span class="year">{details.year}</span>
-        <span class="author">Von {details.author}</span>
+
     </div>
 </div>
 
 <style>
+    .card {
+        /*width: 320px;
+        height: 320px;
+        padding: .5rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 7px 0 rgb(0 0 0 / 20%);*/
+        min-height: 195px;
+        vertical-align: bottom;
+    }
 span { 
-    color: #33C3F0 /*#006C73*/;
-    background-color: rgba(51, 195, 240, 0.25);
+    color: #c3ccd5/*#33C3F0 /*#006C73*/;
+    background-color: rgba(195, 204, 213, 0.25);
     border-radius: 0.25rem;
+    min-width: 9rem;
     padding: 0.125rem 0.625rem;
     margin: 0 0.25rem;
     line-height: 1;
