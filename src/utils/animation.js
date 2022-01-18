@@ -1,15 +1,15 @@
-let currentBackground = "four";
+let currentBackground = "coverFour";
 let newBackground;
 
 function changeBackground(episode) {
     if(episode <= 73) {
-        newBackground = "one";
+        newBackground = "coverOne";
     } else if(episode <= 112) {
-        newBackground = "two";
+        newBackground = "coverTwo";
     } else if(episode <= 152) {
-        newBackground = "three";
+        newBackground = "coverThree";
     } else {
-        newBackground = "four";
+        newBackground = "coverFour";
     }
     console.log('1, current:', currentBackground, 'new', newBackground);
     if(currentBackground !== newBackground) {
