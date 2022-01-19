@@ -45,8 +45,8 @@
         vertical-align: bottom;
     }
 span { 
-    color: #c3ccd5/*#33C3F0 /*#006C73*/;
-    background-color: rgba(195, 204, 213, 0.25);
+    color: #d9d9d9/*#33C3F0 /*#006C73*/;
+    background-color: rgba(217, 217, 217, 0.25);
     border-radius: 0.25rem;
     min-width: 9rem;
     padding: 0.125rem 0.625rem;
