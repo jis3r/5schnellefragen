@@ -14,7 +14,7 @@
     }
 </script>
 
-<Question details={questions[pos]}/>
+<Question details={questions[pos]} current={pos + 1}/>
 <button class="button button-low" on:click={next}>nächste frage</button>
 
 <style>
