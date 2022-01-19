@@ -5,6 +5,16 @@
 
 
 	let asking = false;
+	let mode = "random";
+
+	const startNewest = () => {
+		mode = "newest";
+		toggleView();
+    }	
+	const startRandom = () => {
+		mode = "random";
+		toggleView();
+    }
 
 	const toggleView = () => {
 		asking = !asking;
@@ -16,9 +26,9 @@
 	<div class="container">
 		<Header/>
 		{#if asking}
-			<Game on:back={toggleView}/>
+			<Game on:back={toggleView} mode={mode}/>
 		{:else}
-			<Landing on:start={toggleView}/>
+			<Landing on:startNewest={startNewest} on:startRandom={startRandom}/>
 		{/if}
 	  </div>
 </main>

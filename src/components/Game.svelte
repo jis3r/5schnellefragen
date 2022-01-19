@@ -1,12 +1,21 @@
 <script>
     import Question from './Question.svelte';
-    import { createEventDispatcher } from "svelte";
-    import { getQuesitons } from '../utils/data';
+    import { onMount, createEventDispatcher } from "svelte";
+    import { getRandomQuestions, getNewestQuestions } from '../utils/data';
+
+    export let mode;
 
     const dispatch = createEventDispatcher();
 
-    let questions = getQuesitons();
+    let questions = [];
     let pos = 0;
+
+    onMount(() => {
+        console.log(mode);
+        if(mode === "random") questions = getRandomQuestions();
+        if(mode === "newest") questions = getNewestQuestions();
+        console.log(questions);
+    }); 
 
     const next = () => {
         if(pos === 4) dispatch("back")
