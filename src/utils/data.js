@@ -2206,10 +2206,20 @@ function shuffleArray(array) {
     return array;
 }
 
-function getQuesitons() {
+function getRandomQuestions() {
     return shuffleArray(data).slice(0, 5);
 }
 
+function getNewestQuestions() {
+    return data.filter(q => parseInt(q.episode) === getNewestEpisode());
+}
+
+function getNewestEpisode() {
+    return Math.max.apply(Math, data.map(function(o) { return parseInt(o.episode); }));
+}
+
 export {
-    getQuesitons
+    getRandomQuestions,
+    getNewestQuestions,
+    getNewestEpisode
 }
