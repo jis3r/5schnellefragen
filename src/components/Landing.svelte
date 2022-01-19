@@ -1,10 +1,15 @@
 <script>
     import { createEventDispatcher } from "svelte";
+    import { getNewestEpisode } from '../utils/data';
 
     const dispatch = createEventDispatcher();
 
-    const start = () => {
-        dispatch("start");
+    const startNewest = () => {
+        dispatch("startNewest");
+    }
+
+    const startRandom = () => {
+        dispatch("startRandom");
     }
 
 </script>
@@ -12,22 +17,22 @@
     <div class="four columns">
         <div class="card">
             <h4>Die Neuesten</h4>
-            <p>Starte mit den Fragen aus der neuesten Folge.</p>
-            <button class="button button-card" on:click={start}>Gib mir 5!</button>
+            <p>Starte mit den Fragen aus der neuesten Folge #{getNewestEpisode()}.</p>
+            <button class="button button-card" on:click={startNewest}>Gib mir 5!</button>
         </div>
     </div>
     <div class="four columns">
         <div class="card">
             <h4>Ganz Bestimmte</h4>
             <p>Bestimme selbst, welche Fragen drankommen.</p>
-            <button class="button button-card" on:click={start}>Gib mir 5!</button>
+            <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
         </div>
     </div>
     <div class="four columns">
         <div class="card">
             <h4>Oder Zufällige</h4>
             <p>Überrasche dich mit zufälligen Fragen aus allen Folgen.</p>
-            <button class="button button-card" on:click={start}>Gib mir 5!</button>
+            <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
         </div>
     </div>
 </div>

@@ -11,7 +11,6 @@ function changeBackground(episode) {
     } else {
         newBackground = "coverFour";
     }
-    console.log('1, current:', currentBackground, 'new', newBackground);
     if(currentBackground !== newBackground) {
         document.getElementsByTagName("body")[0].classList.add(newBackground);
         document.getElementsByTagName("body")[0].classList.remove(currentBackground);
