@@ -15,4 +15,13 @@
 </script>
 
 <Question details={questions[pos]}/>
-<button class="button-primary button-low" on:click={next}>nächste frage</button>
+<button class="button button-low" on:click={next}>nächste frage</button>
+
+<style>
+    .button-low {
+        position: absolute;
+	    bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+</style>

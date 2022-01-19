@@ -1,11 +1,7 @@
-.button-low {
+.button {
 	color: #FEFEFE !important;
 	background-color: transparent !important;
 	border-color: #FEFEFE !important;
-	position: absolute;
-	bottom: 0px;
-	left: 50%;
-    transform: translate(-50%, 0);
 	border-radius: 1000px;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
