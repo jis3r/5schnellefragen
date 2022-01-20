@@ -3,7 +3,7 @@
     import { onMount, afterUpdate } from "svelte";
     export let details = {  id: "-1", 
                             question: "Frage",
-                            episode: "-1",
+                            episode: "169",
                             year: "2000",
                             author: "dump"
                         }
