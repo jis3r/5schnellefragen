@@ -18,13 +18,20 @@
     }); 
 
     const next = () => {
-        if(pos === 4) dispatch("back")
         pos = pos + 1;
+    }
+
+    const back = () => {
+        dispatch("back")
     }
 </script>
 
 <Question details={questions[pos]} current={pos + 1}/>
-<button class="button button-low" on:click={next}>nächste frage</button>
+{#if pos === 4}
+    <button class="button button-low" on:click={back}>fertig</button>
+{:else}
+    <button class="button button-low" on:click={next}>nächste frage</button>
+{/if}
 
 <style>
     .button-low {
