@@ -1,46 +1,92 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import { getNewestEpisode } from '../utils/data';
+    import { scale } from "svelte/transition";
+    import Select_Element from './Select_Element.svelte';
+    import { getNewestEpisode } from '../utils/questions';
 
     const dispatch = createEventDispatcher();
+    let filter = false;
+    let years = ["2018", "2019", "2020", "2021", "2022", "Alle"];
+    let authors = ["Felix", "Tommi", "Community", "Allen"];
+    let selectedYear = "Alle";
+    let selectedAuthor = "Allen";
+
+
 
     const startNewest = () => {
         dispatch("startNewest");
+    }
+
+    const startFilter = () => {
+        filter = true;
     }
 
     const startRandom = () => {
         dispatch("startRandom");
     }
 
+    const selectYear = (e) => {
+        selectedYear = e.detail;
+    }
+
+    const selectAuthor = (e) => {
+        selectedAuthor = e.detail;
+    }
+
 </script>
+
+
 <div class="row" style="margin-top: 15%">
-    <div class="four columns">
-        <div class="card">
-            <h4>Die Neuesten</h4>
-            <p>Starte mit den Fragen aus der neuesten Folge #{getNewestEpisode()}.</p>
-            <button class="button button-card" on:click={startNewest}>Gib mir 5!</button>
+    {#if filter}
+        <div class="three columns"> <p></p> </div>
+        <div class="six columns" in:scale>
+            <div class="card">
+                <h4>Ganz Bestimmte</h4>
+                <div class="custom-select">
+                    <label for="">Jahr</label>
+                    {#each years as year}
+                    <Select_Element value={year} current={selectedYear} on:changeSelected={selectYear}/>
+                    {/each}
+                </div>
+                <div class="custom-select">
+                    <label for="">Von</label>
+                    {#each authors as author}
+                    <Select_Element value={author} current={selectedAuthor} on:changeSelected={selectAuthor}/>
+                    {/each}
+                </div>
+
+                <button class="button button-card" on:click={startFilter}>Los!</button>
+            </div>
         </div>
-    </div>
-    <div class="four columns">
-        <div class="card">
-            <h4>Ganz Bestimmte</h4>
-            <p>Bestimme selbst, welche Fragen drankommen.</p>
-            <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
+        <div class="three columns"> <p></p> </div>
+    {:else}
+        <div class="four columns" in:scale>
+            <div class="card u-full-width">
+                <h4>Die Neuesten</h4>
+                <p>Starte mit den Fragen aus der neuesten Folge #{getNewestEpisode()}.</p>
+                <button class="button button-card" on:click={startNewest}>Gib mir 5!</button>
+            </div>
         </div>
-    </div>
-    <div class="four columns">
-        <div class="card">
-            <h4>Oder Zufällige</h4>
-            <p>Überrasche dich mit zufälligen Fragen aus allen Folgen.</p>
-            <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
+        <div class="four columns" in:scale>
+            <div class="card u-full-width">
+                <h4>Ganz Bestimmte</h4>
+                <p>Bestimme selbst, welche Fragen drankommen.</p>
+                <button class="button button-card" on:click={startFilter}>Gib mir 5!</button>
+            </div>
         </div>
-    </div>
+        <div class="four columns" in:scale>
+            <div class="card u-full-width">
+                <h4>Oder Zufällige</h4>
+                <p>Überrasche dich mit zufälligen Fragen aus allen Folgen.</p>
+                <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
+            </div>
+        </div>
+    {/if}
 </div>
 
 <style>
     .card {
         box-sizing: border-box;
-        width: 100%;
         padding: 1.8rem;
         border-radius: 1rem;
         box-shadow: 0 2px 7px 0 rgb(0 0 0 / 20%);
@@ -59,15 +105,10 @@
         float: right;    
         margin-bottom: 0%;
     }
-    .button-options {
-        float: right;    
-        margin-bottom: 0%;
-        margin-right: -20px;
-        border-radius: 1000px 0px 0px 1000px;
-        border-top: 1px solid;
-        border-right: 0px;
-        border-bottom: 1px solid;
-        border-left: 1pxc solid;
-    }
 
+    .custom-select {
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+
+    }
 </style>

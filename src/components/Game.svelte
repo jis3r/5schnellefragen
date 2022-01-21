@@ -1,7 +1,7 @@
 <script>
     import Question from './Question.svelte';
     import { onMount, createEventDispatcher } from "svelte";
-    import { getRandomQuestions, getNewestQuestions } from '../utils/data';
+    import { getRandomQuestions, getNewestQuestions } from '../utils/questions';
 
     export let mode;
 
