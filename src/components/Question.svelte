@@ -1,6 +1,7 @@
 <script>
-    import { changeBackground } from '../utils/animation';
     import { onMount, afterUpdate } from "svelte";
+    import { scale } from "svelte/transition";
+    import { changeBackground } from '../utils/animation';
     export let details = {  id: "-1", 
                             question: "Frage",
                             episode: "169",
@@ -18,7 +19,7 @@
     });
 </script>
 
-<div class="row" style="margin-top: 25%">
+<div class="row" style="margin-top: 25%" in:scale>
     <div class="twelve columns">
         <div class="card">
             <p class="current">{current}/5</p>
@@ -27,11 +28,6 @@
             <span class="author">von {details.author}</span>
             <span class="year">Jahr {details.year}</span>
             <span class="episode">Folge {details.episode}</span>
-    </div>
-</div>
-<div class="row">
-    <div class="twelve columns">
-
     </div>
 </div>
 
