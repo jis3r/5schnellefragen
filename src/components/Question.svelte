@@ -9,6 +9,7 @@
                             author: "dump"
                         }
     export let current;
+    export let amount;
     
     onMount(() => {
         changeBackground(parseInt(details.episode));
@@ -22,7 +23,7 @@
 <div class="row" style="margin-top: 25%" in:scale>
     <div class="twelve columns">
         <div class="card">
-            <p class="current">{current}/5</p>
+            <p class="current">{current}/{amount}</p>
             <h3 class="question">{details.question}</h3>
         </div>
             <span class="author">von {details.author}</span>
