@@ -1,24 +1,28 @@
 <script>
     import Question from './Question.svelte';
     import { onMount, createEventDispatcher } from "svelte";
-    import { getRandomQuestions, getNewestQuestions } from '../utils/questions';
+    import { getRandomQuestions, getFilteredQuestions, getNewestQuestions } from '../utils/questions';
 
     export let mode;
+    export let filter;
 
     const dispatch = createEventDispatcher();
 
     let questions = [];
     let pos = 0;
+    let show = true;
 
     onMount(() => {
-        console.log(mode);
         if(mode === "random") questions = getRandomQuestions();
+        if(mode === "filtered") questions = getFilteredQuestions(filter[0], filter[1]);
         if(mode === "newest") questions = getNewestQuestions();
         console.log(questions);
     }); 
 
     const next = () => {
+        show = false;
         pos = pos + 1;
+        show = true;
     }
 
     const back = () => {
@@ -26,8 +30,10 @@
     }
 </script>
 
-<Question details={questions[pos]} current={pos + 1}/>
-{#if pos === 4}
+{#if show}
+<Question details={questions[pos]} current={pos + 1} amount={questions.length}/>
+{/if}
+{#if pos === questions.length-1}
     <button class="button button-low" on:click={back}>fertig</button>
 {:else}
     <button class="button button-low" on:click={next}>nächste frage</button>

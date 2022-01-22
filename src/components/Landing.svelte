@@ -6,8 +6,8 @@
 
     const dispatch = createEventDispatcher();
     let filter = false;
-    let years = ["2018", "2019", "2020", "2021", "2022", "Alle"];
-    let authors = ["Felix", "Tommi", "Community", "Allen"];
+    let years = ["2017", "2018", "2019", "2020", "2021", "2022", "Alle"];
+    let authors = ["Felix", "Tommi", "Allen"];
     let selectedYear = "Alle";
     let selectedAuthor = "Allen";
 
@@ -17,12 +17,16 @@
         dispatch("startNewest");
     }
 
-    const startFilter = () => {
-        filter = true;
+    const startFiltered = () => {
+        dispatch("startFiltered", [selectedYear, selectedAuthor]);
     }
-
+    
     const startRandom = () => {
         dispatch("startRandom");
+    }
+    
+    const showFilter = () => {
+        filter = true;
     }
 
     const selectYear = (e) => {
@@ -41,7 +45,7 @@
         <div class="three columns"> <p></p> </div>
         <div class="six columns" in:scale>
             <div class="card">
-                <h4>Ganz Bestimmte</h4>
+                <h4>Wähle aus!</h4>
                 <div class="custom-select">
                     <label for="">Jahr</label>
                     {#each years as year}
@@ -55,7 +59,7 @@
                     {/each}
                 </div>
 
-                <button class="button button-card" on:click={startFilter}>Los!</button>
+                <button class="button button-card" on:click={startFiltered}>Los!</button>
             </div>
         </div>
         <div class="three columns"> <p></p> </div>
@@ -71,7 +75,7 @@
             <div class="card u-full-width">
                 <h4>Ganz Bestimmte</h4>
                 <p>Bestimme selbst, welche Fragen drankommen.</p>
-                <button class="button button-card" on:click={startFilter}>Gib mir 5!</button>
+                <button class="button button-card" on:click={showFilter}>Gib mir 5!</button>
             </div>
         </div>
         <div class="four columns" in:scale>
