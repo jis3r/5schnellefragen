@@ -31,10 +31,12 @@
 </script>
 
 {#if show}
-<Question details={questions[pos]} current={pos + 1} amount={questions.length}/>
+    <Question details={questions[pos]} current={pos + 1} amount={questions.length}/>
 {/if}
 {#if pos === questions.length-1}
     <button class="button button-low" on:click={back}>fertig</button>
+{:else if questions.length === 0}
+    <button class="button button-low" on:click={back}>zurück</button>
 {:else}
     <button class="button button-low" on:click={next}>nächste frage</button>
 {/if}

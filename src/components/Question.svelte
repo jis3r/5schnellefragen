@@ -22,13 +22,19 @@
 
 <div class="row" style="margin-top: 25%" in:scale>
     <div class="twelve columns">
-        <div class="card">
-            <p class="current">{current}/{amount}</p>
-            <h3 class="question">{details.question}</h3>
-        </div>
-            <span class="author">von {details.author}</span>
-            <span class="year">Jahr {details.year}</span>
-            <span class="episode">Folge {details.episode}</span>
+        {#if amount === 0}
+            <div class="card">
+                <h3 class="question">Für diesen Filter gibt es leider keine Fragen.</h3>
+            </div>
+        {:else}
+            <div class="card">
+                <p class="current">{current}/{amount}</p>
+                <h3 class="question">{details.question}</h3>
+            </div>
+                <span class="author">von {details.author}</span>
+                <span class="year">Jahr {details.year}</span>
+                <span class="episode">Folge {details.episode}</span>
+        {/if}
     </div>
 </div>
 
