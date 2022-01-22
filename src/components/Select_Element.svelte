@@ -22,18 +22,18 @@
 
 </script>
 
-<span id="{value}" on:click={toggleSelected} class="">{value}</span>
+<span id="{value}" on:click={toggleSelected} class="u-pull-left">{value}</span>
 
 <style>
     span {
         color: #fefefe;
         background: transparent;
         cursor: pointer;
+        min-height: 1.75rem;
         padding: 0.125rem 0.625rem;
-        margin: 0 0.5r 0 0em;
-        line-height: 1;
+        margin: 0 .5rem .5rem 0 !important;
         font-weight: 500;
-        vertical-align: middle;
+        vertical-align: middle !important;
         transition: 150ms;
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */

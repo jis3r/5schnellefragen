@@ -6,8 +6,8 @@
 
     const dispatch = createEventDispatcher();
     let filter = false;
-    let years = ["2017", "2018", "2019", "2020", "2021", "2022", "Alle"];
-    let authors = ["Felix", "Tommi", "Allen"];
+    let years = ["Alle", "2022", "2021", "2020", "2019", "2018", "2017"];
+    let authors = ["Allen", "Felix", "Tommi"];
     let selectedYear = "Alle";
     let selectedAuthor = "Allen";
 
@@ -46,17 +46,21 @@
         <div class="six columns" in:scale>
             <div class="card">
                 <h4>Wähle aus!</h4>
-                <div class="custom-select">
+                <div class="custom-select u-pull-left">
                     <label for="">Jahr</label>
-                    {#each years as year}
-                    <Select_Element value={year} current={selectedYear} on:changeSelected={selectYear}/>
-                    {/each}
+                    <p>
+                        {#each years as year}
+                        <Select_Element value={year} current={selectedYear} on:changeSelected={selectYear}/>
+                        {/each}
+                    </p>
                 </div>
-                <div class="custom-select">
+                <div class="custom-select u-pull-left">
                     <label for="">Von</label>
-                    {#each authors as author}
-                    <Select_Element value={author} current={selectedAuthor} on:changeSelected={selectAuthor}/>
-                    {/each}
+                    <p>
+                        {#each authors as author}
+                        <Select_Element value={author} current={selectedAuthor} on:changeSelected={selectAuthor}/>
+                        {/each}
+                    </p>
                 </div>
 
                 <button class="button button-card" on:click={startFiltered}>Los!</button>
@@ -113,6 +117,6 @@
     .custom-select {
         margin-right: 2rem;
         margin-bottom: 1rem;
-
+        width: 100%;
     }
 </style>
