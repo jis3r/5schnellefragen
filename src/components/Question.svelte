@@ -43,23 +43,18 @@
         margin-bottom: 0%;
     }
     .card {
-        /*width: 320px;
-        height: 320px;
-        padding: .5rem;
-        border-radius: 1rem;
-        box-shadow: 0 2px 7px 0 rgb(0 0 0 / 20%);*/
-        min-height: 195px;
+        min-height: 229px;
         vertical-align: bottom;
     }
-span { 
-    color: #d9d9d9/*#33C3F0 /*#006C73*/;
-    background-color: rgba(217, 217, 217, 0.25);
-    border-radius: 0.25rem;
-    min-width: 9rem;
-    padding: 0.125rem 0.625rem;
-    margin: 0 0.25rem;
-    line-height: 1;
-    font-weight: 500;
-    vertical-align: middle;
-}
+    span { 
+        color: #d9d9d9/*#33C3F0 /*#006C73*/;
+        background-color: rgba(217, 217, 217, 0.25);
+        border-radius: 0.25rem;
+        min-width: 9rem;
+        padding: 0.125rem 0.625rem;
+        margin: 0 0.25rem;
+        line-height: 1;
+        font-weight: 500;
+        vertical-align: middle;
+    }
 </style>
