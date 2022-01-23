@@ -1,5 +1,5 @@
 <script>
-    import { onMount, afterUpdate } from "svelte";
+    import { beforeUpdate } from "svelte";
     import { scale } from "svelte/transition";
     import { changeBackground } from '../utils/animation';
     export let details = {  id: "-1", 
@@ -10,12 +10,8 @@
                         }
     export let current;
     export let amount;
-    
-    onMount(() => {
-        changeBackground(parseInt(details.episode));
-    });
 
-    afterUpdate(() => {
+    beforeUpdate(() => {
         changeBackground(parseInt(details.episode));
     });
 </script>
@@ -31,7 +27,7 @@
                 <p class="current">{current}/{amount}</p>
                 <h3 class="question">{details.question}</h3>
             </div>
-                <span class="author">von {details.author}</span>
+                <span class="author">Von {details.author}</span>
                 <span class="year">Jahr {details.year}</span>
                 <span class="episode">Folge {details.episode}</span>
         {/if}
