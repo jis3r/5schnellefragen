@@ -40,7 +40,7 @@
 </script>
 
 
-<div class="row" style="margin-top: 15%">
+<div class="row landing">
     {#if filter}
         <div class="three columns"> <p></p> </div>
         <div class="six columns" in:scale>
@@ -93,6 +93,9 @@
 </div>
 
 <style>
+    .landing {
+        margin-top: 15%;
+    }
     .card {
         box-sizing: border-box;
         padding: 1.8rem;

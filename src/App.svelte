@@ -30,7 +30,7 @@
 </script>
 
 <main>
-	<div class="container" style="overflow: auto;">
+	<div class="container">
 		<Header/>
 		{#if asking}
 			<Game on:back={toggleView} mode={mode} filter={filter}/>
