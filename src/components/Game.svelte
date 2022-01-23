@@ -44,7 +44,7 @@
 <style>
     .button-low {
         position: absolute;
-	    bottom: 0px;
+	    bottom: 1em;
         left: 50%;
         transform: translate(-50%, 0);
     }
