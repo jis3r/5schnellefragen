@@ -12,7 +12,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 /**
@@ -22,14 +22,14 @@ html {
 body {
   margin: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
 main {
   box-sizing: border-box;
-  min-height: 100vh;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  height: 100%;
 }
 
 /* HTML5 display definitions

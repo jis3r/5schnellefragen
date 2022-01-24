@@ -43,8 +43,8 @@
 
 <style>
     .button-low {
-        position: absolute;
-	    bottom: 1em;
+        position: fixed;
+	    bottom: .5rem;
         left: 50%;
         transform: translate(-50%, 0);
     }
