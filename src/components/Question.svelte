@@ -6,7 +6,8 @@
                             question: "Frage",
                             episode: "169",
                             year: "2000",
-                            author: "dump"
+                            author: "dump",
+                            count: 0
                         }
     export let current;
     export let amount;
@@ -30,6 +31,8 @@
                 <span class="author">Von {details.author}</span>
                 <span class="year">Jahr {details.year}</span>
                 <span class="episode">Folge {details.episode}</span>
+                <span class="count">count {details.count}</span>
+                <span class="count">id {details.id}</span>
         {/if}
     </div>
 </div>
