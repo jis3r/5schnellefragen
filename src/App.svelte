@@ -1,12 +1,19 @@
 <script>
+	import { onMount } from "svelte";
 	import Header from './components/Header.svelte';	
 	import Landing from './components/Landing.svelte';
 	import Game from './components/Game.svelte';
+	import { synchLocalStorage } from './utils/questions';
+
 
 
 	let asking = false;
 	let mode = "random";
 	let filter = [];
+
+	onMount(() => {
+		synchLocalStorage();
+    }); 
 
 	const startNewest = () => {
 		mode = "newest";

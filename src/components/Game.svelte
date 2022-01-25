@@ -1,7 +1,7 @@
 <script>
     import Question from './Question.svelte';
     import { onMount, createEventDispatcher } from "svelte";
-    import { getRandomQuestions, getFilteredQuestions, getNewestQuestions } from '../utils/questions';
+    import { getRandomQuestions, getFilteredQuestions, getNewestQuestions, synchLocalStorage } from '../utils/questions';
 
     export let mode;
     export let filter;
@@ -26,7 +26,7 @@
     }
 
     const back = () => {
-        dispatch("back")
+        dispatch("back");
     }
 </script>
 
