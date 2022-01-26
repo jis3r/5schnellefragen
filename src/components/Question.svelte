@@ -13,7 +13,7 @@
     export let amount;
 
     beforeUpdate(() => {
-        changeBackground(parseInt(details.episode));
+        if(amount !== 0) changeBackground(parseInt(details.episode));
     });
 </script>
 
