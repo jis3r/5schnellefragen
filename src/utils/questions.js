@@ -1,6 +1,6 @@
 import { data } from './data';
 
-let questionDatabase;
+var questionDatabase;
 let selectedQuestions = [];
 let init = false;
 let max = 5;
@@ -17,26 +17,24 @@ function shuffleArray(array) {
 function getRandomQuestions(a) {
     let array = a || questionDatabase;
     selectedQuestions = [];
-    array = getUnusedQuestions(array);
-    array = shuffleArray(array).slice(0, max);
+    array = shuffleArray( getUnusedQuestions(array) ).slice(0, max);
     array.forEach(element => selectedQuestions.push(element));
-    synchLocalStorage();
+    max = 5;//reset max to five for the next pack of questions
     return selectedQuestions;
 }
 
+/*gets all questions with lowest count-value. 
+If the length of the result is smaller than 5, it raises minCount and sets the max value to the number of missing questions to get to 5 in total.*/
 function getUnusedQuestions(a) {
     let array = a;
-    a.filter(q => q.count === minCount);
-    console.log(a);
-    if(a.length <= 5) {
+    a = a.filter(q => q.count === minCount);
+    if(a.length < 5) {
         minCount++;
         max = 5 - a.length;
         selectedQuestions = a;
-        synchLocalStorage();
-        getUnusedQuestions(array);
-    } else {
-        return a;
+        a = getUnusedQuestions(array);
     }
+    return a;
 }
 
 function getFilteredQuestions(y, a) {
@@ -56,7 +54,6 @@ function getFilteredQuestions(y, a) {
 function getNewestQuestions() {
     selectedQuestions = [];
     selectedQuestions = questionDatabase.filter(q => parseInt(q.episode) === getNewestEpisode());
-    synchLocalStorage();
     return selectedQuestions;
 }
 
@@ -64,47 +61,29 @@ function getNewestEpisode() {
     return Math.max.apply(Math, data.map(function(o) { return parseInt(o.episode); }));
 }
 
-function trackQuestions() {
-    let logs = JSON.parse(localStorage.getItem('questionLog'));
-    if(logs) {
-        if(logs.length !== data.length) localStorage.setItem('questionLog', JSON.stringify(data));
-
-    } else {
-        localStorage.setItem('questionLog', JSON.stringify(data));
-        logs = data;
-    }
-    /*if(logs.length !== 0) {
-        for (let i = 0; i < questionDatabase.length; i++) {
-            // Find if the array contains an object by comparing the property value
-            if(logs.some(log => log.id === questionDatabase[i].id)) {
-                alert("Object found inside the array.");
-            } else{
-                alert("Object not found.");
-            }
-        }
-    }*/
-}
-
-function synchLocalStorage() {
+//Synchronizes localStorage with latest questionDatabase-changes
+function syncLocalStorage() {
     if(!init) {
         questionDatabase = JSON.parse(localStorage.getItem('questionLog'));
         if(!questionDatabase || questionDatabase.length !== data.length) {
+            questionDatabase = data;
             console.log("localstorage was outdated");
             writeLocalStorage();
-            questionDatabase = data;
         }
         init = true;
-        console.log("localStorage was synchronized");
     } else {
         for(var i = 0; i < selectedQuestions.length; i++) {
-            questionDatabase[selectedQuestions[i].id].count++;
+            const index = questionDatabase.findIndex(q => q.id === selectedQuestions[i].id);
+            questionDatabase[index].count++;
         }
         writeLocalStorage();
     }
+    console.log("localStorage was synchronized");
 }
 
+//writes current questionDatabase-state into localStorage
 const writeLocalStorage = () => {
-    localStorage.setItem('questionLog', JSON.stringify(data));
+    localStorage.setItem('questionLog', JSON.stringify(questionDatabase));
 }
 
 export {
@@ -112,5 +91,5 @@ export {
     getFilteredQuestions,
     getNewestQuestions,
     getNewestEpisode,
-    synchLocalStorage
+    syncLocalStorage
 }
