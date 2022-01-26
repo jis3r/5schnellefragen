@@ -48,6 +48,8 @@ function getFilteredQuestions(y, a) {
     if(author !== "Allen") {
         filtered = filtered.filter(q => q.author === author);
     }
+
+    if(filtered.length === 0) return [];
     return getRandomQuestions(filtered);
 }
 
