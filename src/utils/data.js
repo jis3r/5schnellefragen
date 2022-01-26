@@ -62,6 +62,38 @@ let data = [
         year: "2017",
         author: "Tommi",
         count: 0
+    },
+    {
+        id: "8",
+        question: "Testfrage?",
+        episode: "001",
+        year: "1999",
+        author: "Jakob",
+        count: 0
+    },
+    {
+        id: "9",
+        question: "Was war dein letzter Fehlkauf?",
+        episode: "004",
+        year: "2017",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "10",
+        question: "Welche Frage würde dein fünfzehnjähriges Ich stellen? (titten oder geld)",
+        episode: "004",
+        year: "2017",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "11",
+        question: "Was ist das in deinem Leben worauf du am stolzesten bist?",
+        episode: "004",
+        year: "2017",
+        author: "Felix",
+        count: 0
     }
 ]
 
