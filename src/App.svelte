@@ -3,7 +3,7 @@
 	import Header from './components/Header.svelte';	
 	import Landing from './components/Landing.svelte';
 	import Game from './components/Game.svelte';
-	import { synchLocalStorage } from './utils/questions';
+	import { syncLocalStorage } from './utils/questions';
 
 
 
@@ -12,7 +12,7 @@
 	let filter = [];
 
 	onMount(() => {
-		synchLocalStorage();
+		syncLocalStorage();
     }); 
 
 	const startNewest = () => {
