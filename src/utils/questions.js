@@ -1,6 +1,6 @@
 import { data } from './data';
 
-var questionDatabase;
+var questionDatabase = [];
 let selectedQuestions = [];
 let init = false;
 let max = 5;
@@ -66,16 +66,20 @@ function getNewestEpisode() {
 //Synchronizes localStorage with latest questionDatabase-changes
 function syncLocalStorage() {
     if(!init) {
-        questionDatabase = JSON.parse(localStorage.getItem('questionLog'));
-        if(!questionDatabase || questionDatabase.length !== data.length) {
-            questionDatabase = data;
+        questionDatabase = data;
+        let loc = JSON.parse(localStorage.getItem('questionLog'));
+        for(let i = 0; i < loc.length; i++) {
+            let index = questionDatabase.findIndex(q => q.id === loc[i].id);
+            if(index > 0) questionDatabase[index].count = loc[i].count;
+        }
+        if(!loc || loc.length !== questionDatabase.length) {
             console.log("localstorage was outdated");
             writeLocalStorage();
         }
         init = true;
     } else {
         for(var i = 0; i < selectedQuestions.length; i++) {
-            const index = questionDatabase.findIndex(q => q.id === selectedQuestions[i].id);
+            let index = questionDatabase.findIndex(q => q.id === selectedQuestions[i].id);
             questionDatabase[index].count++;
         }
         writeLocalStorage();
@@ -85,7 +89,7 @@ function syncLocalStorage() {
 
 //writes current questionDatabase-state into localStorage
 const writeLocalStorage = () => {
-    localStorage.setItem('questionLog', JSON.stringify(questionDatabase));
+    localStorage.setItem('questionLog', JSON.stringify(questionDatabase.map(q => ({id: q.id, count: q.count}))));
 }
 
 export {
