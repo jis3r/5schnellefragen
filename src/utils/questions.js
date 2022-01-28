@@ -68,11 +68,12 @@ function syncLocalStorage() {
     if(!init) {
         questionDatabase = data;
         let loc = JSON.parse(localStorage.getItem('questionLog'));
-        for(let i = 0; i < loc.length; i++) {
-            let index = questionDatabase.findIndex(q => q.id === loc[i].id);
-            if(index > 0) questionDatabase[index].count = loc[i].count;
-        }
-        if(!loc || loc.length !== questionDatabase.length) {
+        if(loc !== null) {
+            for(let i = 0; i < loc.length; i++) {
+                let index = questionDatabase.findIndex(q => q.id === loc[i].id);
+                if(index >= 0) questionDatabase[index].count = loc[i].count;
+            }
+        } else {
             console.log("localstorage was outdated");
             writeLocalStorage();
         }
