@@ -12,7 +12,6 @@
     let selectedAuthor = "Allen";
 
 
-
     const startNewest = () => {
         dispatch("startNewest");
     }
@@ -36,7 +35,6 @@
     const selectAuthor = (e) => {
         selectedAuthor = e.detail;
     }
-
 </script>
 
 
