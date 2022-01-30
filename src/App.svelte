@@ -3,6 +3,7 @@
 	import Header from './components/Header.svelte';	
 	import Landing from './components/Landing.svelte';
 	import Game from './components/Game.svelte';
+	import Bottom from './components/Bottom.svelte';
 	import { syncLocalStorage } from './utils/questions';
 
 
@@ -43,6 +44,7 @@
 			<Game on:back={toggleView} mode={mode} filter={filter}/>
 		{:else}
 			<Landing on:startNewest={startNewest} on:startFiltered={startFiltered} on:startRandom={startRandom}/>
+			<Bottom/>
 		{/if}
 	  </div>
 </main>

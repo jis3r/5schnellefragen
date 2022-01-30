@@ -67,7 +67,7 @@ function getNewestEpisode() {
 function syncLocalStorage() {
     if(!init) {
         questionDatabase = data;
-        let loc = JSON.parse(localStorage.getItem('questionLog'));
+        let loc = JSON.parse(localStorage.getItem('loc'));
         if(loc !== null) {
             for(let i = 0; i < loc.length; i++) {
                 let index = questionDatabase.findIndex(q => q.id === loc[i].id);
@@ -90,7 +90,7 @@ function syncLocalStorage() {
 
 //writes current questionDatabase-state into localStorage
 const writeLocalStorage = () => {
-    localStorage.setItem('questionLog', JSON.stringify(questionDatabase.map(q => ({id: q.id, count: q.count}))));
+    localStorage.setItem('loc', JSON.stringify(questionDatabase.map(q => ({id: q.id, count: q.count}))));
 }
 
 export {
