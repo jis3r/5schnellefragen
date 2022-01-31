@@ -1,11 +1,7 @@
 <script>
 	import { onMount } from "svelte";
-
 	import Router from 'svelte-spa-router';
-	import { push } from 'svelte-spa-router';
-
 	import Header from './components/Header.svelte';	
-
 	import { syncLocalStorage } from './utils/questions';
 	import routes from './routes.js';
 
