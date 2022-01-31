@@ -1,6 +1,7 @@
 <script>
     import { scale } from "svelte/transition";
     import Select_Element from '../components/Select_Element.svelte';
+    import Bottom from '../components/Bottom.svelte';
     import { getNewestEpisode } from '../utils/questions';
     import { push } from 'svelte-spa-router';
 
@@ -89,6 +90,8 @@
         </div>
     {/if}
 </div>
+<Bottom/>
+
 
 <style>
     .landing {

@@ -40,12 +40,3 @@
 {:else}
     <button class="button button-low" on:click={next}>nächste frage</button>
 {/if}
-
-<style>
-    .button-low {
-        position: fixed;
-	    bottom: .5rem;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-</style>
