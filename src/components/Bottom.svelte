@@ -17,11 +17,18 @@
 
 <style>
     .links {
+        padding-bottom: 15px;
+    }
+    @media (min-height: 725px) {
+        .links {
         position: fixed;
-        bottom: -50px;
+        bottom: 0px;
         bottom: .5rem;
         left: 50%;
         transform: translate(-50%, 0);
+        padding-bottom: 0;
+    }
+
     }
     .link {
         cursor: pointer;        
