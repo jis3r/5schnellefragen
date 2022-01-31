@@ -1,20 +1,19 @@
 <script>
-    import Question from './Question.svelte';
+    import { replace } from 'svelte-spa-router';
+    import Question from '../components/Question.svelte';
     import { onMount, createEventDispatcher } from "svelte";
     import { getRandomQuestions, getFilteredQuestions, getNewestQuestions, syncLocalStorage } from '../utils/questions';
 
-    export let mode;
-    export let filter;
-
-    const dispatch = createEventDispatcher();
+    export let params = {};
 
     let questions = [];
     let pos = 0;
     let show = true;
 
     onMount(() => {
+        let mode = params.mode;
         if(mode === "random") questions = getRandomQuestions();
-        if(mode === "filtered") questions = getFilteredQuestions(filter[0], filter[1]);
+        if(mode === "filtered") questions = getFilteredQuestions(params.year, params.author);
         if(mode === "newest") questions = getNewestQuestions();
         console.log(questions);
     }); 
@@ -27,7 +26,7 @@
 
     const back = () => {
         syncLocalStorage();
-        dispatch("back");
+        replace('/');
     }
 </script>
 

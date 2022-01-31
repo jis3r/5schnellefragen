@@ -1,10 +1,10 @@
 <script>
-    import { createEventDispatcher } from "svelte";
     import { scale } from "svelte/transition";
-    import Select_Element from './Select_Element.svelte';
+    import Select_Element from '../components/Select_Element.svelte';
     import { getNewestEpisode } from '../utils/questions';
+    import { push } from 'svelte-spa-router';
 
-    const dispatch = createEventDispatcher();
+
     let filter = false;
     let years = ["Alle", "2022", "2021", "2020", "2019", "2018", "2017"];
     let authors = ["Allen", "Felix", "Tommi"];
@@ -13,15 +13,15 @@
 
 
     const startNewest = () => {
-        dispatch("startNewest");
+        push('/game/newest');
     }
 
     const startFiltered = () => {
-        dispatch("startFiltered", [selectedYear, selectedAuthor]);
+        push('/game/filtered/' + selectedYear + '/' + selectedAuthor);
     }
     
     const startRandom = () => {
-        dispatch("startRandom");
+        push('/game/random');
     }
     
     const showFilter = () => {
