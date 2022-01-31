@@ -20,12 +20,15 @@ function getRandomQuestions(a) {
     array = shuffleArray( getUnusedQuestions(array) ).slice(0, max);
     array.forEach(element => selectedQuestions.push(element));
     max = 5;//reset max to five for the next pack of questions
+    minCount = 0;
     return selectedQuestions;
 }
 
 /*gets all questions with lowest count-value. 
 If the length of the result is smaller than 5, it raises minCount and sets the max value to the number of missing questions to get to 5 in total.*/
 function getUnusedQuestions(a) {
+    if(a.length < 5) return a;
+
     let array = a;
     a = a.filter(q => q.count === minCount);
     if(a.length < 5) {
