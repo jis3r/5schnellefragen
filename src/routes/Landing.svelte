@@ -26,7 +26,7 @@
     }
     
     const showFilter = () => {
-        filter = true;
+        filter = !filter;
     }
 
     const selectYear = (e) => {
@@ -62,6 +62,7 @@
                     </p>
                 </div>
 
+                <img src="img/arrow-left.svg" alt="Zurück" style="float: left; margin-bottom: 0%; cursor: pointer;" on:click={showFilter}>
                 <button class="button button-card" on:click={startFiltered}>Los!</button>
             </div>
         </div>
