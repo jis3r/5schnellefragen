@@ -89,9 +89,9 @@
                 <button class="button button-card" on:click={startRandom}>Gib mir 5!</button>
             </div>
         </div>
+        <Bottom/>
     {/if}
 </div>
-<Bottom/>
 
 
 <style>
