@@ -1777,7 +1777,7 @@ let data = [
     },
     {
         id: "222",
-        question: "Was hältst du von der Floskel \"man kann alles erreichen?\"",
+        question: "Was hältst du von der Floskel \"man kann alles erreichen\"?",
         episode: "81",
         year: "2019",
         author: "Tommi",
