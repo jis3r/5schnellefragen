@@ -49,7 +49,7 @@ let data = [
     },
     {
         id: "6",
-        question: "Macht Geld glücklich?",
+        question: "Macht Geld glücklich?",
         episode: "5",
         year: "2017",
         author: "Tommi",
@@ -4365,6 +4365,46 @@ let data = [
         episode: "174",
         year: "2022",
         author: "Felix",
+        count: 0
+    },
+    {
+        id: "546",
+        question: "Was ist der beste Salat?",
+        episode: "175",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "547",
+        question: "Was ist eigentlich noch undenkbar?",
+        episode: "175",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "548",
+        question: "Was zeigt dir der Algorithmus aktuell auf Social Media?",
+        episode: "175",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "549",
+        question: "Über welche Alterserscheinung von dir kannst du sehr lachen?",
+        episode: "175",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "550",
+        question: "Was ist aktuell das Kindischste an dir?",
+        episode: "175",
+        year: "2022",
+        author: "Tommi",
         count: 0
     }
 ]
