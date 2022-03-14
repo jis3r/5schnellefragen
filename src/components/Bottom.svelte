@@ -2,16 +2,14 @@
     import { push } from 'svelte-spa-router';
 
 
-    const showContact = () => {
-        push('/contact');
+    const showFAQ = () => {
+        push('/faq');
     }
 </script>
 
 
 <div class="links">
-    <span class="link" on:click={showContact}>Kontakt</span>
-    <!--span>| </!--span>
-    <span-- class="link">FAQ</span-->
+    <span class="link" on:click={showFAQ}>FAQ</span>
 </div>
 
 
