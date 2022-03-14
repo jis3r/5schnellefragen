@@ -4409,6 +4409,9 @@ let data = [
     }
 ]
 
+const amount = data.length;
+
 export {
-    data
+    data,
+    amount
 }
