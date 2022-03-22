@@ -4433,7 +4433,7 @@ let data = [
     },
     {
         id: "554",
-        question: "Welche Kleinigkeit macht dein Leben deutlich besser bzw. deutlich schlechter, wenn du sie nicht dabei hast?",
+        question: "Welche Kleinigkeit macht dein Leben deutlich besser (bzw. deutlich schlechter, wenn du sie nicht dabei hast)?",
         episode: "176",
         year: "2022",
         author: "Felix",
