@@ -21,6 +21,9 @@
     <h4>Wie wird bestimmt, welche Frage als Nächstes gestellt wird?</h4>
     <p class="answer">Der Browser (Chrome, Safari, etc.) speichert lokal auf deinem Gerät, welche Frage wie häufig gestellt wurde. Wenn du dir das nächste Mal Fragen stellen lässt, wird dies berücksichtigt (sofern du auf demselben Gerät denselben Browser nutzt). Dadurch können dir so lange wie möglich neue Fragen gestellt werden. Bei bestimmten Filtern kann es aufgrund der kleinen Anzahl an passenden Fragen jedoch häufiger zu Wiederholungen kommen.</p>
 
+    <h4>Wie kommen die Hintergrundfarben zustande?</h4>
+    <p class="answer">Die Farben basieren auf dem Coverbild der Folge, aus der die aktuelle Frage stammt.</p>
+
     <h4>Wie kann ich Kontakt aufnehmen?</h4>
     <p class="answer">Wenn du Fragen, Ideen oder Verbesserungsvorschläge hast, kontaktiere mich gerne <a href="mailto:moin@5schnellefragen.de">hier</a>. Ich freue mich. :)</p>
 </div>
