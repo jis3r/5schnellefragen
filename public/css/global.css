@@ -19,13 +19,6 @@
 	background: -webkit-linear-gradient(180deg, rgba(58,98,120,1) 0%, rgba(29,48,60,1) 100%);
 	background: linear-gradient(180deg, rgba(58,98,120,1) 0%, rgba(29,48,60,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a6278",endColorstr="#1d303c",GradientType=1);
-	/*
-	background: rgb(107,138,163);
-	background: -moz-linear-gradient(180deg, rgba(107,138,163,1) 0%, rgba(57,91,121,1) 84%);
-	background: -webkit-linear-gradient(180deg, rgba(107,138,163,1) 0%, rgba(57,91,121,1) 84%);
-	background: linear-gradient(180deg, rgba(107,138,163,1) 0%, rgba(57,91,121,1) 84%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6b8aa3",endColorstr="#395b79",GradientType=1);
-	*/
 }
 
 .coverThree {
@@ -34,13 +27,6 @@
 	background: -webkit-linear-gradient(180deg, rgba(183,34,21,1) 0%, rgba(93,19,11,1) 84%);
 	background: linear-gradient(180deg, rgba(183,34,21,1) 0%, rgba(93,19,11,1) 84%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b72215",endColorstr="#5d130b",GradientType=1);
-	/*
-	background: rgb(208,68,47);
-	background: -moz-linear-gradient(180deg, rgba(208,68,47,1) 0%, rgba(121,13,10,1) 84%);
-	background: -webkit-linear-gradient(180deg, rgba(208,68,47,1) 0%, rgba(121,13,10,1) 84%);
-	background: linear-gradient(180deg, rgba(208,68,47,1) 0%, rgba(121,13,10,1) 84%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0442f",endColorstr="#790d0a",GradientType=1);
-	*/
 }
 
 .coverTwo {
@@ -49,13 +35,6 @@
 	background: -webkit-linear-gradient(180deg, rgba(59,13,21,1) 0%, rgba(31,7,10,1) 84%);
 	background: linear-gradient(180deg, rgba(59,13,21,1) 0%, rgba(31,7,10,1) 84%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b0d15",endColorstr="#1f070a",GradientType=1);
-	/*
-	background: rgb(91,53,45);
-	background: -moz-linear-gradient(180deg, rgba(91,53,45,1) 0%, rgba(50,12,21,1) 84%);
-	background: -webkit-linear-gradient(180deg, rgba(91,53,45,1) 0%, rgba(50,12,21,1) 84%);
-	background: linear-gradient(180deg, rgba(91,53,45,1) 0%, rgba(50,12,21,1) 84%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b352d",endColorstr="#320c15",GradientType=1);
-	*/
 }
 
 .coverOne {
@@ -64,66 +43,4 @@
 	background: -webkit-linear-gradient(180deg, rgba(105,50,42,1) 0%, rgba(53,24,20,1) 84%);
 	background: linear-gradient(180deg, rgba(105,50,42,1) 0%, rgba(53,24,20,1) 84%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#69322a",endColorstr="#351814",GradientType=1);
-	/*
-	background: rgb(156,79,67);
-	background: -moz-linear-gradient(180deg, rgba(156,79,67,1) 0%, rgba(71,44,38,1) 84%);
-	background: -webkit-linear-gradient(180deg, rgba(156,79,67,1) 0%, rgba(71,44,38,1) 84%);
-	background: linear-gradient(180deg, rgba(156,79,67,1) 0%, rgba(71,44,38,1) 84%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c4f43",endColorstr="#472c26",GradientType=1);
-	*/
-}
-
-select {
-	color: #FEFEFE !important;
-	background: transparent !important;
-	border-color: #FEFEFE !important;
-	border-radius: 1000px;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-	padding-left: 1.5rem;
-	padding-right: 3rem;
-}
-
-.custom-arrow {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	background: transparent !important;
-	border: 1px solid red !important;	
-	height: 3.6rem;
-	width: 3.6rem;
-	border-radius: 1000px;
-	pointer-events: none;
-	z-index: 100;
-}
-
-.custom-arrow::before,
-.custom-arrow::after {
-	--size: .75rem;
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.custom-arrow::before {
-	border-left: var(--size) solid transparent;
-	border-right: var(--size) solid transparent;
-	border-bottom: var(--size) solid rgba(255, 255, 255, .5);
-	top: 35%;
-}
-
-.custom-arrow::after {
-	border-left: var(--size) solid transparent;
-	border-right: var(--size) solid transparent;
-	border-top: var(--size) solid rgba(255, 255, 255, .5);
-	top: 65%
-}
-
-.selected {
-	color: #d9d9d9 !important;
-	background-color: rgba(217, 217, 217, 0.25) !important;
-	border-radius: 1rem !important;
 }
