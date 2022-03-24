@@ -44,3 +44,9 @@
 	background: linear-gradient(180deg, rgba(105,50,42,1) 0%, rgba(53,24,20,1) 84%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#69322a",endColorstr="#351814",GradientType=1);
 }
+
+.selected {
+	color: #d9d9d9 !important;
+	background-color: rgba(217, 217, 217, 0.25) !important;
+	border-radius: 1rem !important;
+}
