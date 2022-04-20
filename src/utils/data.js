@@ -4582,6 +4582,46 @@ let data = [
         year: "2022",
         author: "Tommi",
         count: 0
+    },
+    {
+        id: "573",
+        question: "Was ist schlimmer: jemand, dessen Wäsche stockig riecht oder jemand, dessen Wäsche zu sehr nach Waschmittel und Weichspüler riecht?",
+        episode: "181",
+        year: "2022",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "574",
+        question: "Wo guckt man(n) immer hin, wenn's mal da ist?",
+        episode: "181",
+        year: "2022",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "575",
+        question: "Welche Dinge die andere gerne in Gesellschaft machen, machst du lieber alleine?",
+        episode: "181",
+        year: "2022",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "576",
+        question: "Welche Dinge die andere gerne allein machen, machst du lieber in Gesellschaft?",
+        episode: "181",
+        year: "2022",
+        author: "Felix",
+        count: 0
+    },
+    {
+        id: "577",
+        question: "Für welches Totschlagargument entwickelst du langsam Empathie?",
+        episode: "181",
+        year: "2022",
+        author: "Felix",
+        count: 0
     }
 ]
 
