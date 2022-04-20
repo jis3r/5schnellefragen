@@ -77,7 +77,7 @@ function syncLocalStorage() {
                 if(index >= 0) questionDatabase[index].count = loc[i].count;
             }
         } else {
-            console.log("localstorage was outdated");
+            //console.log("localstorage was outdated");
             writeLocalStorage();
         }
         init = true;
@@ -88,7 +88,7 @@ function syncLocalStorage() {
         }
         writeLocalStorage();
     }
-    console.log("localStorage was synchronized");
+    //console.log("localStorage was synchronized");
 }
 
 //writes current questionDatabase-state into localStorage

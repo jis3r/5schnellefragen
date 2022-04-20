@@ -15,7 +15,7 @@
         if(mode === "random") questions = getRandomQuestions();
         if(mode === "filtered") questions = getFilteredQuestions(params.year, params.author);
         if(mode === "newest") questions = getNewestQuestions();
-        console.log(questions);
+        //console.log(questions);
     }); 
 
     const next = () => {
