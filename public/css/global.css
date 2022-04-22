@@ -8,7 +8,7 @@
 
 .button-low {
 	position: fixed;
-	bottom: .5rem;
+	bottom: 10%;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
