@@ -4622,6 +4622,30 @@ let data = [
         year: "2022",
         author: "Felix",
         count: 0
+    },
+    {
+        id: "578",
+        question: "Welchen Rat würdest du einem armen kleinen Kind geben?",
+        episode: "182",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "579",
+        question: "Welche Eigenschaft von dir hat sich im Alter komplett verändert?",
+        episode: "182",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "580",
+        question: "Was macht dich komischerweise melancholisch?",
+        episode: "182",
+        year: "2022",
+        author: "Tommi",
+        count: 0
     }
 ]
 
