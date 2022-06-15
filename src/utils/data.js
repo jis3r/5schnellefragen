@@ -4750,6 +4750,30 @@ let data = [
         year: "2022",
         author: "Felix",
         count: 0
+    },
+    {
+        id: "594",
+        question: "Welche deiner Vorsätze haben sich etabliert?",
+        episode: "189",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "595",
+        question: "Wofür könnte man dich auch nachts um 3 Uhr wecken?",
+        episode: "189",
+        year: "2022",
+        author: "Tommi",
+        count: 0
+    },
+    {
+        id: "596",
+        question: "Welche kriminelle Tat würdest du begehen, wenn du dringend an Geld kommen müsstest?",
+        episode: "189",
+        year: "2022",
+        author: "Tommi",
+        count: 0
     }
 ]
 
