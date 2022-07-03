@@ -2,12 +2,11 @@
 <html lang="de-DE">
 <head>
 	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<meta name="description" content="Stelle dir und deinen Freunden die Fragen aus dem einflussreichsten Podcast Europas.">
 	<meta name="keywords" content="Gemischtes Hack, 5 Schnelle Fragen Online, 5 Schnelle Fragen, Fünf schnelle Fragen, 5 schnelle Fragen an, Fünf schnelle Fragen an, Tommi Schmitt, Felix Lobrecht, Spiel, Quiz">
 	<title>5 Schnelle Fragen</title>
 
-	<link rel="manifest" href="/manifest.json" />
 	<meta property="og:title" content="5 Schnelle Fragen"></meta>
 	<meta property="og:description" content="Stelle dir und deinen Freunden die Fragen aus dem einflussreichsten Podcast Europas.">
 	<meta property="og:image" content="favicon.png">
@@ -18,8 +17,6 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="5 Schnelle Fragen">
-    <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png" />
-
 
 	<link rel='icon' type='image/png' href='./img/meta.png'>
 	<link rel="stylesheet" href="css/normalize.css">
@@ -28,25 +25,10 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel='stylesheet' href='/build/bundle.css'>
 
-	<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
-
 	<script defer data-domain-id="3996629ac147d21f7c3b52b67a2d6f7b30b3da0d" src="https://fairdatacenter.de/cdn/fair.js"></script>
 	<script defer src='/build/bundle.js'></script>
 </head>
 
 <body class="coverFour">
-	<noscript>
-		<div>Oops! Javascript required here! Allow it and try again!</div>
-	</noscript>
-
-	<script>
-		if ("serviceWorker" in navigator) {
-		  window.addEventListener("load", () => {
-			navigator.serviceWorker.register("/service-worker.js").then((reg) => {
-			  console.log("Service worker registered.", reg);
-			});
-		  });
-		}
-	  </script>
 </body>
 </html>
