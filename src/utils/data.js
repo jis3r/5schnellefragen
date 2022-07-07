@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         id: "0",
         question: "Was war dein letzter Fehlkauf?",
