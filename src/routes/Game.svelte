@@ -42,19 +42,20 @@
 {#if show}
     <Question details={questions[pos]} current={pos + 1} amount={questions.length}/>
 {/if}
+<div class="u-center" style="bottom: 16%;">
+    {#if favorised}
+    <img src="img/star-filled.svg" alt="Unfav" style="cursor: pointer;" on:click={unfav}>
+{:else}
+    <img src="img/star.svg" alt="Fav" style="cursor: pointer;" on:click={fav}>
+{/if}
+</div>
 <div class="box-low u-center">
     {#if pos === questions.length-1}
-    <button class="button u-pull-left" style="margin-left: 44px" on:click={back}>fertig</button>
+    <button class="button" on:click={back}>fertig</button>
     {:else if questions.length === 0}
-    <button class="button u-pull-left" style="margin-left: 44px" on:click={back}>zurück</button>
+    <button class="button" on:click={back}>zurück</button>
     {:else}
-    <button class="button u-pull-left" style="margin-left: 44px" on:click={next}>nächste frage</button>
-    {/if}
-
-    {#if favorised}
-    <img src="img/star-filled.svg" alt="Unfav" style="margin: 2px 0 0 1rem; cursor: pointer; float:left; cursor: pointer;" on:click={unfav}>
-    {:else}
-    <img src="img/star.svg" alt="Fav" style="margin: 2px 0 0 1rem; cursor: pointer; float:left; cursor: pointer;" on:click={fav}>
+    <button class="button" on:click={next}>nächste frage</button>
     {/if}
 </div>
 
